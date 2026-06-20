@@ -1,0 +1,799 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "description": "Internal path (/team), anchor (#contact), or mailto link",
+        "name": "href",
+        "type": "string",
+        "title": "URL"
+      }
+    ],
+    "name": "navLink",
+    "type": "object",
+    "title": "Navigation Link"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "label",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "href",
+        "type": "string",
+        "title": "URL"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Primary",
+              "value": "primary"
+            },
+            {
+              "title": "Outline",
+              "value": "outline"
+            },
+            {
+              "title": "Secondary",
+              "value": "secondary"
+            }
+          ],
+          "layout": "radio"
+        },
+        "initialValue": "primary",
+        "name": "variant",
+        "type": "string",
+        "title": "Style"
+      }
+    ],
+    "name": "ctaButton",
+    "type": "object",
+    "title": "CTA Button"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "siteName",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "tagline",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "contactEmail",
+        "type": "string"
+      },
+      {
+        "rows": 3,
+        "name": "footerText",
+        "type": "text"
+      },
+      {
+        "description": "Short line shown below the copyright notice",
+        "name": "footerTagline",
+        "type": "string"
+      },
+      {
+        "rows": 2,
+        "name": "enquiryFormText",
+        "type": "text",
+        "title": "Enquiry Form Placeholder Text"
+      },
+      {
+        "name": "navigateHeading",
+        "type": "string",
+        "title": "Footer — Navigate Heading"
+      },
+      {
+        "name": "contactHeading",
+        "type": "string",
+        "title": "Footer — Contact Heading"
+      },
+      {
+        "name": "enquiryButtonLabel",
+        "type": "string"
+      },
+      {
+        "description": "Appended to page titles, e.g. \"Our Team | CoPTaS\"",
+        "name": "seoTitleSuffix",
+        "type": "string",
+        "title": "SEO Title Suffix"
+      },
+      {
+        "of": [
+          {
+            "type": "navLink",
+            "title": "Navigation Link"
+          }
+        ],
+        "name": "navLinks",
+        "type": "array",
+        "title": "Navigation Links"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
+        "name": "logo",
+        "type": "image"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "visionTitle",
+        "type": "string",
+        "title": "Vision — Title"
+      },
+      {
+        "initialValue": "What we stand for",
+        "name": "visionEyebrow",
+        "type": "string",
+        "title": "Vision — Eyebrow"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 1
+              }
+            ]
+          }
+        ],
+        "of": [
+          {
+            "fields": [
+              {
+                "validation": [
+                  {
+                    "level": "error",
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ]
+                  }
+                ],
+                "name": "lead",
+                "type": "string"
+              },
+              {
+                "rows": 3,
+                "validation": [
+                  {
+                    "level": "error",
+                    "rules": [
+                      {
+                        "flag": "presence",
+                        "constraint": "required"
+                      }
+                    ]
+                  }
+                ],
+                "name": "text",
+                "type": "text"
+              }
+            ],
+            "type": "object",
+            "name": "visionItem"
+          }
+        ],
+        "name": "visionItems",
+        "type": "array",
+        "title": "Vision — Items"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "aimTitle",
+        "type": "string",
+        "title": "Aim — Title"
+      },
+      {
+        "rows": 4,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "aimDescription",
+        "type": "text",
+        "title": "Aim — Description"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "purposeTitle",
+        "type": "string",
+        "title": "Purpose — Title"
+      },
+      {
+        "rows": 5,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "purposeDescription",
+        "type": "text",
+        "title": "Purpose — Description"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "objectivesTitle",
+        "type": "string",
+        "title": "Objectives — Title"
+      },
+      {
+        "initialValue": "What we do",
+        "name": "objectivesEyebrow",
+        "type": "string",
+        "title": "Objectives — Eyebrow"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 1
+              }
+            ]
+          }
+        ],
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "objectivesItems",
+        "type": "array",
+        "title": "Objectives — Items"
+      },
+      {
+        "initialValue": "Explore our work",
+        "name": "ctaTitle",
+        "type": "string",
+        "title": "CTA Banner — Title"
+      },
+      {
+        "rows": 2,
+        "name": "ctaDescription",
+        "type": "text",
+        "title": "CTA Banner — Description"
+      },
+      {
+        "of": [
+          {
+            "type": "ctaButton",
+            "title": "CTA Button"
+          }
+        ],
+        "name": "heroButtons",
+        "type": "array",
+        "title": "Hero — Buttons"
+      },
+      {
+        "of": [
+          {
+            "type": "ctaButton",
+            "title": "CTA Button"
+          }
+        ],
+        "name": "ctaButtons",
+        "type": "array",
+        "title": "CTA Banner — Buttons"
+      }
+    ],
+    "name": "homePage",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Page Title"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "description",
+        "type": "text",
+        "title": "Intro Description"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "seoTitle",
+        "type": "string",
+        "title": "SEO Title"
+      },
+      {
+        "rows": 2,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "seoDescription",
+        "type": "text",
+        "title": "SEO Description"
+      }
+    ],
+    "name": "teamPage",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Page Title"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "description",
+        "type": "text",
+        "title": "Intro Description"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "seoTitle",
+        "type": "string",
+        "title": "SEO Title"
+      },
+      {
+        "rows": 2,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "seoDescription",
+        "type": "text",
+        "title": "SEO Description"
+      }
+    ],
+    "name": "papersPage",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "role",
+        "type": "string"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "fields": [
+          {
+            "name": "alt",
+            "type": "string",
+            "title": "Alternative Text"
+          }
+        ],
+        "name": "photo",
+        "type": "image"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "areasOfInterest",
+        "type": "array",
+        "title": "Areas of Interest"
+      },
+      {
+        "rows": 6,
+        "name": "biography",
+        "type": "text"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 0
+              }
+            ]
+          }
+        ],
+        "name": "displayOrder",
+        "type": "number"
+      }
+    ],
+    "name": "teamMember",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 1
+              }
+            ]
+          }
+        ],
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "authors",
+        "type": "array"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 1900
+              },
+              {
+                "flag": "max",
+                "constraint": 2100
+              }
+            ]
+          }
+        ],
+        "name": "year",
+        "type": "number"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "journal",
+        "type": "string",
+        "title": "Journal or Conference"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "name": "externalLink",
+        "type": "url"
+      },
+      {
+        "rows": 5,
+        "name": "abstract",
+        "type": "text"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean"
+      }
+    ],
+    "name": "publishedPaper",
+    "type": "document"
+  }
+]

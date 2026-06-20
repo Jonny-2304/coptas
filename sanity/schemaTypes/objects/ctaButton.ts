@@ -1,0 +1,38 @@
+import { defineField, defineType } from "sanity";
+
+export const ctaButton = defineType({
+  name: "ctaButton",
+  title: "CTA Button",
+  type: "object",
+  fields: [
+    defineField({
+      name: "label",
+      title: "Label",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "href",
+      title: "URL",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "variant",
+      title: "Style",
+      type: "string",
+      options: {
+        list: [
+          { title: "Primary", value: "primary" },
+          { title: "Outline", value: "outline" },
+          { title: "Secondary", value: "secondary" },
+        ],
+        layout: "radio",
+      },
+      initialValue: "primary",
+    }),
+  ],
+  preview: {
+    select: { title: "label", subtitle: "href" },
+  },
+});

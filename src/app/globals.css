@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --surface: #fafaf8;
+  --surface-elevated: #ffffff;
+  --brand-50: #f0f4f9;
+  --brand-100: #dce6f0;
+  --brand-200: #b8cce0;
+  --brand-300: #8aa8c8;
+  --brand-400: #5c84a8;
+  --brand-500: #3d668a;
+  --brand-600: #2f506e;
+  --brand-700: #243f58;
+  --brand-800: #1a3045;
+  --brand-900: #122333;
+  --brand-950: #0e2841;
+  --accent-green: #196b24;
+  --accent-green-light: #4ea72e;
+  --accent-gold: #d4882a;
+  --accent-teal: #156082;
+  --accent-teal-light: #1a7a9e;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+  --color-accent-green: var(--accent-green);
+  --color-accent-green-light: var(--accent-green-light);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-teal-light: var(--accent-teal-light);
+  --color-accent-100: #e8f5ea;
+  --color-accent-800: var(--accent-green);
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, serif;
+  --shadow-soft: 0 1px 3px rgb(14 40 65 / 0.06), 0 8px 24px rgb(14 40 65 / 0.06);
+  --shadow-card: 0 1px 2px rgb(14 40 65 / 0.04), 0 4px 16px rgb(14 40 65 / 0.08);
+  --shadow-card-hover: 0 4px 8px rgb(14 40 65 / 0.06), 0 12px 32px rgb(14 40 65 / 0.12);
+}
+
+body {
+  background: var(--surface);
+  color: var(--brand-900);
+}
+
+::selection {
+  background: rgb(21 96 130 / 0.18);
+  color: var(--brand-950);
+}
+
+/* Subtle dot grid texture */
+.bg-texture {
+  background-image: radial-gradient(rgb(14 40 65 / 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Hero mesh gradient */
+.bg-hero-mesh {
+  background-color: var(--surface-elevated);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgb(25 107 36 / 0.07), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 90% 10%, rgb(212 136 42 / 0.08), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgb(21 96 130 / 0.06), transparent 55%);
+}
+
+.bg-section-alt {
+  background: linear-gradient(
+    180deg,
+    rgb(240 244 249 / 0.6) 0%,
+    var(--surface) 100%
+  );
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-in {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
