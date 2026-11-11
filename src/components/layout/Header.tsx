@@ -43,7 +43,7 @@ export function Header({ navLinks, logo, siteName }: HeaderProps) {
         "sticky top-0 z-50 transition-all duration-300",
         scrolled
           ? "border-b border-brand-100/80 bg-surface-elevated/90 shadow-[var(--shadow-soft)] backdrop-blur-md"
-          : "border-b border-transparent bg-surface-elevated/70 backdrop-blur-sm",
+          : "border-b border-brand-100 bg-surface-elevated/95 backdrop-blur-sm",
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:gap-8 lg:px-8">

@@ -14,7 +14,7 @@ export function Hero({ siteName, tagline, buttons, logo }: HeroProps) {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden border-b border-brand-100/80 bg-hero-mesh bg-texture"
+      className="relative overflow-hidden border-b border-brand-100/80 bg-hero-mesh"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -right-32 top-0 h-[480px] w-[480px] rounded-full bg-accent-green/5 blur-3xl" />

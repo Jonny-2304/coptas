@@ -58,13 +58,17 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent-teal">
+        <p className="font-serif text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl">
           {eyebrow}
         </p>
       )}
       <h2
         id={id}
-        className="font-serif text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl"
+        className={cn(
+          eyebrow
+            ? "mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent-teal"
+            : "font-serif text-3xl font-semibold tracking-tight text-brand-950 sm:text-4xl",
+        )}
       >
         {title}
       </h2>

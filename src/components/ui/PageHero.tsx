@@ -11,7 +11,7 @@ export function PageHero({ title, description, className }: PageHeroProps) {
   return (
     <div
       className={cn(
-        "relative overflow-hidden border-b border-brand-100/80 bg-hero-mesh bg-texture",
+        "relative overflow-hidden border-b border-brand-100/80 bg-hero-mesh",
         className,
       )}
     >

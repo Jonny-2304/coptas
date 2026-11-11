@@ -2,6 +2,8 @@ import type { CtaButtonLink, NavLink, PageContent } from "@/lib/sanity/types";
 
 export const defaultNavLinks: NavLink[] = [
   { label: "Home", href: "/" },
+  { label: "What We Stand For", href: "/#what-we-stand-for" },
+  { label: "What We Do", href: "/#what-we-do" },
   { label: "Our Team", href: "/team" },
   { label: "Published Papers", href: "/papers" },
   { label: "Contact", href: "#contact" },

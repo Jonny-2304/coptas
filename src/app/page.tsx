@@ -55,7 +55,11 @@ export default async function HomePage() {
         logo={settings.logo}
       />
 
-      <SectionContainer className="py-20 sm:py-28" ariaLabelledby="vision-heading">
+      <SectionContainer
+        id="what-we-stand-for"
+        className="scroll-mt-28 py-20 sm:py-28"
+        ariaLabelledby="vision-heading"
+      >
         <SectionHeading
           id="vision-heading"
           title={vision.title}
@@ -94,7 +98,11 @@ export default async function HomePage() {
         </SectionContainer>
       </div>
 
-      <SectionContainer className="py-20 sm:py-28" ariaLabelledby="objectives-heading">
+      <SectionContainer
+        id="what-we-do"
+        className="scroll-mt-28 py-20 sm:py-28"
+        ariaLabelledby="objectives-heading"
+      >
         <SectionHeading
           id="objectives-heading"
           title={objectives.title}
