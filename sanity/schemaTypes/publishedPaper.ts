@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+import { monthField } from "./objects/monthField";
 
 export const publishedPaper = defineType({
   name: "publishedPaper",
@@ -24,6 +25,7 @@ export const publishedPaper = defineType({
       type: "number",
       validation: (rule) => rule.required().min(1900).max(2100),
     }),
+    monthField,
     defineField({
       name: "journal",
       title: "Journal or Conference",

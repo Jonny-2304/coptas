@@ -49,7 +49,7 @@ export function Header({ navLinks, logo, siteName }: HeaderProps) {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:gap-8 lg:px-8">
         <Logo size="header" priority logo={logo} siteName={siteName} />
 
-        <nav className="hidden lg:block" aria-label="Main navigation">
+        <nav className="hidden xl:block" aria-label="Main navigation">
           <ul className="flex items-center gap-1">
             {navLinks.map((link) => (
               <li key={`${link.href}-${link.label}`}>
@@ -63,7 +63,7 @@ export function Header({ navLinks, logo, siteName }: HeaderProps) {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg p-2.5 text-brand-700 ring-1 ring-brand-100 transition-colors hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 lg:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2.5 text-brand-700 ring-1 ring-brand-100 transition-colors hover:bg-brand-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 xl:hidden"
           aria-expanded={mobileOpen}
           aria-controls={menuId}
           onClick={() => setMobileOpen((open) => !open)}
@@ -76,13 +76,13 @@ export function Header({ navLinks, logo, siteName }: HeaderProps) {
       {mobileOpen && (
         <>
           <div
-            className="fixed inset-0 top-[65px] z-40 bg-brand-950/20 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 top-[65px] z-40 bg-brand-950/20 backdrop-blur-sm xl:hidden"
             aria-hidden="true"
             onClick={() => setMobileOpen(false)}
           />
           <nav
             id={menuId}
-            className="relative z-50 border-t border-brand-100 bg-surface-elevated lg:hidden"
+            className="relative z-50 border-t border-brand-100 bg-surface-elevated xl:hidden"
             aria-label="Mobile navigation"
           >
             <ul className="flex flex-col px-4 py-4">
@@ -127,7 +127,7 @@ function NavLink({
 }) {
   const classes = cn(
     "relative block rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500",
-    mobile ? "py-3.5 text-base" : "",
+    mobile ? "py-3.5 text-base" : "whitespace-nowrap",
     active
       ? "text-brand-950"
       : "text-brand-600 hover:text-brand-900",

@@ -6,6 +6,7 @@ export const defaultNavLinks: NavLink[] = [
   { label: "What We Do", href: "/#what-we-do" },
   { label: "Our Team", href: "/team" },
   { label: "Published Papers", href: "/papers" },
+  { label: "White Papers", href: "/white-papers" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -36,6 +37,15 @@ export const defaultPapersPageContent: PageContent = {
   seoTitle: "Our Published Papers",
   seoDescription:
     "Browse published research and scholarship from the College of People, Technology and Systems.",
+};
+
+export const defaultWhitePapersPageContent: PageContent = {
+  title: "Non-peer-reviewed Papers and White Papers",
+  description:
+    "Articles, guides, reports and white papers by CoPTaS researchers and collaborators that sit outside formal peer review.",
+  seoTitle: "Non-peer-reviewed Papers and White Papers",
+  seoDescription:
+    "Articles, guides and white papers from the College of People, Technology and Systems.",
 };
 
 export const defaultSiteExtras = {

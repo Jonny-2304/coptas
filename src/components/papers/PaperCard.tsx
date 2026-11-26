@@ -11,6 +11,7 @@ export function PaperCard({ paper }: PaperCardProps) {
     paper.year,
     paper.title,
     paper.journal,
+    paper.month,
   );
   const hasLink = Boolean(paper.externalLink);
 

@@ -48,6 +48,7 @@ export interface PublishedPaper {
   title: string;
   authors: string[];
   year: number;
+  month?: number | null;
   journal: string;
   externalLink?: string;
   abstract?: string;

@@ -79,6 +79,15 @@ export const papersPageQuery = `
   }
 `;
 
+export const whitePapersPageQuery = `
+  *[_id == "whitePapersPage"][0] {
+    title,
+    description,
+    seoTitle,
+    seoDescription
+  }
+`;
+
 export const teamMembersQuery = `
   *[_type == "teamMember"] | order(displayOrder asc) {
     _id,
@@ -95,14 +104,28 @@ export const teamMembersQuery = `
 `;
 
 export const publishedPapersQuery = `
-  *[_type == "publishedPaper"] | order(year desc, title asc) {
+  *[_type == "publishedPaper"] | order(year desc, month desc, title asc) {
     _id,
     title,
     authors,
     year,
+    month,
     journal,
     externalLink,
     abstract,
     featured
+  }
+`;
+
+export const whitePapersQuery = `
+  *[_type == "whitePaper"] | order(year desc, month desc, title asc) {
+    _id,
+    title,
+    authors,
+    year,
+    month,
+    journal,
+    externalLink,
+    abstract
   }
 `;

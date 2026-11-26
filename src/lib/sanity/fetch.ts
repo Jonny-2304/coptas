@@ -1,6 +1,7 @@
 import {
   defaultPapersPageContent,
   defaultTeamPageContent,
+  defaultWhitePapersPageContent,
 } from "@/lib/content/defaults";
 import {
   seedPublishedPapers,
@@ -18,6 +19,8 @@ import {
   siteSettingsQuery,
   teamMembersQuery,
   teamPageQuery,
+  whitePapersPageQuery,
+  whitePapersQuery,
 } from "./queries";
 import {
   mapSanityPageContent,
@@ -95,4 +98,22 @@ export async function getPublishedPapers(): Promise<PublishedPaper[]> {
   }
 
   return seedPublishedPapers;
+}
+
+export async function getWhitePapersPageContent(): Promise<PageContent> {
+  const page = await sanityFetch<Parameters<typeof mapSanityPageContent>[0]>({
+    query: whitePapersPageQuery,
+    revalidate: 300,
+  });
+
+  return mapSanityPageContent(page, defaultWhitePapersPageContent);
+}
+
+export async function getWhitePapers(): Promise<PublishedPaper[]> {
+  const papers = await sanityFetch<PublishedPaper[]>({
+    query: whitePapersQuery,
+    revalidate: 60,
+  });
+
+  return papers ?? [];
 }

@@ -11,6 +11,7 @@ const singletonTypes = new Set([
   "homePage",
   "teamPage",
   "papersPage",
+  "whitePapersPage",
 ]);
 
 export default defineConfig({
@@ -50,9 +51,20 @@ export default defineConfig({
               .child(
                 S.document().schemaType("papersPage").documentId("papersPage"),
               ),
+            S.listItem()
+              .title("White Papers Page")
+              .id("whitePapersPage")
+              .child(
+                S.document()
+                  .schemaType("whitePapersPage")
+                  .documentId("whitePapersPage"),
+              ),
             S.divider(),
             S.documentTypeListItem("teamMember").title("Team Members"),
             S.documentTypeListItem("publishedPaper").title("Published Papers"),
+            S.documentTypeListItem("whitePaper").title(
+              "Non-peer-reviewed & White Papers",
+            ),
           ]),
     }),
   ],

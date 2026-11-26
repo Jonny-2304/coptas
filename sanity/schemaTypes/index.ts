@@ -6,6 +6,8 @@ import { publishedPaper } from "./publishedPaper";
 import { siteSettings } from "./siteSettings";
 import { teamMember } from "./teamMember";
 import { teamPage } from "./teamPage";
+import { whitePaper } from "./whitePaper";
+import { whitePapersPage } from "./whitePapersPage";
 
 export const schemaTypes = [
   navLink,
@@ -14,6 +16,8 @@ export const schemaTypes = [
   homePage,
   teamPage,
   papersPage,
+  whitePapersPage,
   teamMember,
   publishedPaper,
+  whitePaper,
 ];

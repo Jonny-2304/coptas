@@ -16,11 +16,34 @@ export function formatAuthors(authors: string[]): string {
   return `${authors.slice(0, -1).join(", ")}, and ${authors[authors.length - 1]}`;
 }
 
+const MONTH_NAMES = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 export function formatCitation(
   authors: string[],
   year: number,
   title: string,
   journal: string,
+  month?: number | null,
 ): string {
-  return `${formatAuthors(authors)} (${year}). ${title}. ${journal}.`;
+  const monthName = month ? MONTH_NAMES[month - 1] : undefined;
+  const date = monthName ? `${year}, ${monthName}` : `${year}`;
+  return `${formatAuthors(authors)} (${date}). ${withPeriod(title)} ${withPeriod(journal)}`;
+}
+
+/** Ends a citation part with a period unless it already ends in punctuation. */
+function withPeriod(text: string): string {
+  return /[.?!]$/.test(text.trim()) ? text.trim() : `${text.trim()}.`;
 }
